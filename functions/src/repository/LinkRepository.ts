@@ -1,4 +1,4 @@
-import { LinkModel } from '../../db/Models/Link'
+import { LinkModel } from '../db/Models/Link'
 
 export class LinkRepository {
   async create(url: string, hash: string) {

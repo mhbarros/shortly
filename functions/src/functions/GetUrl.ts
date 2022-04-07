@@ -3,7 +3,7 @@ import Cors from 'cors'
 
 const cors = Cors({ origin: true })
 
-import { LinkModel } from '../../db/Models/Link'
+import { LinkModel } from '../db/Models/Link'
 
 const GetUrl = functions.https.onRequest(
   async (request: functions.Request, response: functions.Response) => {

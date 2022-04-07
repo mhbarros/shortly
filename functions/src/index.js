@@ -7,7 +7,7 @@ exports.geturl = exports.short = void 0;
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 console.log(process.env);
-require("../db/config");
+require("./db/config");
 const Short_1 = __importDefault(require("./functions/Short"));
 const GetUrl_1 = __importDefault(require("./functions/GetUrl"));
 exports.short = Short_1.default;

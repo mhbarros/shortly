@@ -38,7 +38,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const functions = __importStar(require("firebase-functions"));
 const cors_1 = __importDefault(require("cors"));
 const cors = (0, cors_1.default)({ origin: true });
-const Link_1 = require("../../db/Models/Link");
+const Link_1 = require("../db/Models/Link");
 const GetUrl = functions.https.onRequest((request, response) => __awaiter(void 0, void 0, void 0, function* () {
     cors(request, response, () => __awaiter(void 0, void 0, void 0, function* () {
         const code = request.params[0].replace('/', '');
