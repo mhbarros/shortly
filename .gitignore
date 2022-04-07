@@ -1,0 +1,7 @@
+# Files
+firebase.json
+.firebaserc
+
+# Folders
+/.vscode
+/.firebase
