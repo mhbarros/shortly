@@ -18,7 +18,6 @@
 </div>
 
 <!-- ABOUT THE PROJECT -->
-<hr/>
 
 ## About
 
