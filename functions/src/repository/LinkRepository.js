@@ -14,7 +14,7 @@ const Link_1 = require("../db/Models/Link");
 class LinkRepository {
     create(url, hash) {
         return __awaiter(this, void 0, void 0, function* () {
-            new Link_1.LinkModel({
+            return yield new Link_1.LinkModel({
                 url,
                 hash,
             }).save();

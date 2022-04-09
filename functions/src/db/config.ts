@@ -1,4 +1,7 @@
 import mongoose from 'mongoose'
+import dotenv from 'dotenv'
+
+dotenv.config({ path: '../.env.prod' })
 
 const db_user = process.env.DB_USER
 const db_pass = process.env.DB_PASS

@@ -5,35 +5,36 @@ import cors from 'cors'
 
 const Cors = cors({ origin: true })
 
-const Short = functions.https.onRequest(
-  async (request: functions.Request, response: functions.Response) => {
-    Cors(request, response, async () => {
-      if (request.method !== 'POST') {
-        response.status(404).send()
-        return
-      }
+const Short = async (request: functions.Request, response: functions.Response) => {
+  Cors(request, response, async () => {
+    if (request.method !== 'POST') {
+      response.status(404)
+      response.send()
+      return
+    }
 
-      const { url } = request.body // todo: validation
-      if (!url) {
-        response
-          .status(400)
-          .json({ error: "Required parameter 'url' not set." })
-        return
-      }
+    const { url } = request.body // todo: validation
+    if (!url) {
+      response.status(400)
+      response.json({ error: "Required parameter 'url' not set." })
+      return
+    }
 
-      const shortHash = generateShortHash(Date.now().toString()) // todo: better hash
+    const shortHash = generateShortHash(Date.now().toString()).replace('+', '') // todo: better hash
 
-      try {
-        await new LinkRepository().create(url, shortHash)
-      } catch (e: any) {
-        response.status(400).json({ error: e.message })
-      }
+    try {
+      await new LinkRepository().create(url, shortHash)
+    } catch (e: any) {
+      response.status(400)
+      response.json({ error: e.message })
+      return
+    }
 
-      response.status(200).json({
-        short: process.env.BASE_URL + shortHash,
-      })
+    response.status(200)
+    response.json({
+      short: process.env.BASE_URL + shortHash,
     })
-  }
-)
+  })
+}
 
 export default Short

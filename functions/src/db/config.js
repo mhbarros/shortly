@@ -4,6 +4,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config({ path: '../.env.prod' });
 const db_user = process.env.DB_USER;
 const db_pass = process.env.DB_PASS;
 const db_slug = process.env.DB_SLUG;
