@@ -13,7 +13,7 @@
 
   <p align="center">
     A simple serverless url shortener <br/>
-    <a href=''>Access the project 🔗</a>
+    <a href='https://short.mhbarros.com.br' target='_blank'>Access the project 🔗</a>
   </p>
 </div>
 
