@@ -8,7 +8,7 @@ const Cors = cors({ origin: true })
 const Short = async (request: functions.Request, response: functions.Response) => {
   Cors(request, response, async () => {
     if (request.method !== 'POST') {
-      response.status(404)
+      response.status(405)
       response.send()
       return
     }

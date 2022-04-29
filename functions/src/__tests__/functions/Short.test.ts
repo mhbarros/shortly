@@ -12,7 +12,7 @@ it('should return 404 if the request method is GET', done => {
   const response: any = {
     status: (code: number) => {
       try {
-        expect(code).toBe(404)
+        expect(code).toBe(405)
       } catch (e) {
         done(e)
       }

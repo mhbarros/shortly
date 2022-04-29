@@ -1,0 +1,49 @@
+.blink-1 {
+    animation: blink-1 ease;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+
+.blink-2 {
+    animation: blink-2 ease;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+
+@keyframes blink-1 {
+    0%{
+        color: white;
+    }
+    25%{
+        color: gray;
+    }
+    50%{
+        color: dimgray;
+    }
+    75%{
+        color: gray;
+    }
+    100%{
+        color: white;
+    }
+}
+
+@keyframes blink-2 {
+    0%{
+        color: white;
+    }
+    25%{
+        color: gray
+    }
+    50%{
+        color: dimgray;
+    }
+    75%{
+        color: gray;
+    }
+    100%{
+        color: white;
+    }
+}

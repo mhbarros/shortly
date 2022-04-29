@@ -19,7 +19,7 @@ const Cors = (0, cors_1.default)({ origin: true });
 const Short = (request, response) => __awaiter(void 0, void 0, void 0, function* () {
     Cors(request, response, () => __awaiter(void 0, void 0, void 0, function* () {
         if (request.method !== 'POST') {
-            response.status(404);
+            response.status(405);
             response.send();
             return;
         }
