@@ -27,7 +27,7 @@ This project is a simple (yet fast!) url shortener system, built with serverless
 
 - [x] [Firebase Cloud Functions](https://firebase.google.com/docs/functions)
 - [x] [Typescript](https://firebase.google.com/docs/functions)
-- [x] [Jest](https://jestjs.io/)
+- [x] [Jest + ts-jest](https://jestjs.io/)
 - [x] [Create React App](https://create-react-app.dev/)
 ### Features
 - [x] Short a URL via REST API or webpage
